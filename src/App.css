@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+.data {
+    position: absolute;
+    top: 750px;
+    left: 282px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: aliceblue;
+}
+.hours {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    top: 200px;
+    left: 200px;
+    position: absolute;
+    background-color: #eea51d;
+
+}
+.wind {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    top: 100px;
+    left: 100px;
+    position: absolute;
+    background-color: #f56565;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.temperature {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: relative;
+    left: 140px;
+    top: 140px;
+    background-color: #f57b43;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.temp {
+    --rotation: 0deg;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
 }
 
-.App-link {
-  color: #61dafb;
+.temp1 { --rotation: 0deg; }
+.temp2 { --rotation: 30deg; }
+.temp3 { --rotation: 60deg; }
+.temp4 { --rotation: 90deg; }
+.temp5 { --rotation: 120deg; }
+.temp6 { --rotation: 150deg; }
+.temp7 { --rotation: 180deg; }
+.temp8 { --rotation: 210deg; }
+.temp9 { --rotation: 240deg; }
+.temp10 { --rotation: 270deg; }
+.temp11 { --rotation: 300deg; }
+.temp12 { --rotation: 330deg; }
+
+
+.centerInfo {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    text-align: center;
+    left: 250px;
+    top: 250px;
+    border-radius: 50%;
+    background-color: #282828;
+    color: white;
+}
+.info {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    height: 100%;
+    font-size: 1.1em;
+}
+.currentTemp {
+    font-size: 3em;
+    font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+/*.pie {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    /*background-image: conic-gradient(from -15deg, hsl(195,100%,var(--cloud1)) 30deg, hsl(195,100%,var(--cloud2)) 60deg, hsl(195,100%,var(--cloud3)) 90deg, hsl(195,100%,var(--cloud4)) 120deg,
+    hsl(195,100%,var(--cloud5)) 150deg, hsl(195,100%,var(--cloud6)) 1100deg, hsl(195,100%,var(--cloud7)) 195deg, hsl(195,100%,var(--cloud8)) 240deg, hsl(195,100%,var(--cloud9)) 270deg,
+    hsl(195,100%,var(--cloud10)) 300deg, hsl(195,100%,var(--cloud11)) 330deg, hsl(195,100%,var(--cloud12)) 360deg);
+
+    /*background-image: conic-gradient(from -15deg, hsl(210,50%,var(--color1)) 30deg, hsl(210,50%,50%) 60deg, hsl(210,50%,70%) 90deg, hsl(210,50%,70%) 120deg,
+    hsl(210,50%,70%) 150deg, hsl(210,30%,var(--color6)) 180deg, hsl(210,30%,var(--color7)) 210deg, hsl(210,30%,var(--color8)) 240deg, hsl(210,30%,var(--color9)) 270deg,
+    hsl(210,30%,var(--color10)) 300deg, hsl(210,30%,var(--color11)) 330deg, hsl(210,30%,var(--color12)) 360deg);*/
+    
+      /*document.documentElement.style.setProperty('--cloud1', conversion(data.hourly[0].clouds) + '%')
+      document.documentElement.style.setProperty('--cloud2', conversion(data.hourly[1].clouds) + '%')
+      document.documentElement.style.setProperty('--cloud3', conversion(data.hourly[2].clouds) + '%')
+      document.documentElement.style.setProperty('--cloud4', conversion(data.hourly[3].clouds) + '%')
+      document.documentElement.style.setProperty('--cloud5', conversion(data.hourly[4].clouds) + '%')
+      document.documentElement.style.setProperty('--cloud6', conversion(data.hourly[5].clouds) + '%')
+      document.documentElement.style.setProperty('--cloud7', conversion(data.hourly[6].clouds) + '%')
+      document.documentElement.style.setProperty('--cloud8', conversion(data.hourly[7].clouds) + '%')
+      document.documentElement.style.setProperty('--cloud9', conversion(data.hourly[8].clouds) + '%')
+      document.documentElement.style.setProperty('--cloud10', conversion(data.hourly[9].clouds) + '%')
+      document.documentElement.style.setProperty('--cloud11', conversion(data.hourly[10].clouds) + '%')
+      document.documentElement.style.setProperty('--cloud12', conversion(data.hourly[11].clouds) + '%')*/
+
+
+    /*const url = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + location[0].lat + '&lon=' + location[0].lon + '&exclude=minutely,daily&appid=c2dab97a3b9f1db8f07b7b551f9be805'*/
+    /*const conversion = (val) => {
+    return val/4 + 50
+    }*/
+/*:root {
+    --cloud1: 100%;
+    --cloud2: 100%;
+    --cloud3: 100%;
+    --cloud4: 100%;
+    --cloud5: 100%;
+    --cloud6: 100%;
+    --cloud7: 100%;
+    --cloud8: 100%;
+    --cloud9: 100%;
+    --cloud10: 100%;
+    --cloud11: 100%;
+    --cloud12: 100%;
+}*/
